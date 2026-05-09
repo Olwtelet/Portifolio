@@ -2,7 +2,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useEffect, useState } from 'react'
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible'
 import { socialBarData } from '@/data/social-bar'
-
 export default function ContactMenu() {
   const [mounted, setMounted] = useState(false)
   const [isOpen, setIsOpen] = useState(false)

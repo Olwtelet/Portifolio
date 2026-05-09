@@ -12,7 +12,7 @@
     "dev": "vite dev --port 3000",
     "dev:mono": "sst dev --mode mono --verbose",
     "start": "vite dev --port 3000",
-    "build": "bun run icons/generate.ts && vite build && cp dist/favicon.ico .output/public/favicon.ico && cp dist/icon.svg .output/public/icon.svg && cp dist/opengraph.png .output/public/opengraph.png",
+    "build": "bun run icons/generate.ts && vite build && cp dist/favicon.ico .vercel/output/static/favicon.ico && cp dist/icon.svg .vercel/output/static/icon.svg && cp dist/opengraph.png .vercel/output/static/opengraph.png",
     "sst": "sst",
     "serve": "vite preview",
     "test": "vitest run",

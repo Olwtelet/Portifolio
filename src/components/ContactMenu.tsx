@@ -2,13 +2,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useEffect, useState } from 'react'
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible'
 import { socialBarData } from '@/data/social-bar'
-
 export default function ContactMenu() {
   const [mounted, setMounted] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
-
   useEffect(() => setMounted(true), [])
-
   const animationClasses = [
     'animate-slide-in-1',
     'animate-slide-in-2',
@@ -16,15 +13,13 @@ export default function ContactMenu() {
     'animate-slide-in-4',
     'animate-slide-in-5'
   ]
-
   if (!mounted) {
     return (
       <div className="w-fit">
-        <span className="w-fit font-bold text-2xl text-theme-700">CONTATO</span>
+        <span className="w-fit font-bold text-2xl text-theme-700">CONTACT</span>
       </div>
     )
   }
-
   return (
     <Collapsible open={isOpen} onOpenChange={setIsOpen} className="w-fit">
       <CollapsibleTrigger asChild>
@@ -33,13 +28,13 @@ export default function ContactMenu() {
           className="w-fit transform font-bold text-2xl text-theme-700 transition-colors duration-200 hover:scale-105 hover:text-theme-500"
           data-umami-event="Home Contact Menu Toggled"
         >
-          CONTATO
+          CONTACT
         </button>
       </CollapsibleTrigger>
       <CollapsibleContent className="collapsible-content mt-4 overflow-hidden">
         <div className="flex flex-col gap-3 border-theme-200 border-l-2 pl-4">
           {socialBarData.map((social, index) => (
-            <a
+            
               key={social.name}
               href={social.link}
               target="_blank"

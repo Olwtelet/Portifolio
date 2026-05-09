@@ -12,7 +12,7 @@
     "dev": "vite dev --port 3000",
     "dev:mono": "sst dev --mode mono --verbose",
     "start": "vite dev --port 3000",
-    "build": "vite build",
+    "build": "bun run icons/generate.ts && vite build && cp dist/favicon.ico .output/public/favicon.ico && cp dist/icon.svg .output/public/icon.svg && cp dist/opengraph.png .output/public/opengraph.png",
     "sst": "sst",
     "serve": "vite preview",
     "test": "vitest run",
